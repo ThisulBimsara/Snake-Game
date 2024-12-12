@@ -1,0 +1,61 @@
+/* Full Screen Background */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack title and game container vertically */
+  height: 100vh; /* Full viewport height */
+  background-image: url('snake.png'); /* Replace with your image */
+  background-size: cover; /* Cover entire screen */
+  background-position: center; /* Center the background */
+  background-repeat: no-repeat; /* Ensure the background does not repeat */
+}
+
+/* Title (Fixed at the top of the screen) */
+#gameTitle {
+  position: fixed; /* Make title fixed at the top of the screen */
+  top: 30px; /* 20px from the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to perfectly center */
+  font-size: 3rem;
+  color: #170303;
+  margin: 0;
+  z-index: 10; /* Ensure title is above other elements */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Game Container Styling */
+#game-container {
+  position: relative;
+  width: 600px; /* Fixed width of the game area */
+  height: 400px; /* Fixed height of the game area */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for the game */
+  border: 5px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack content vertically */
+  margin-top: 60px; /* Add margin to make space for the fixed title */
+}
+
+/* Score (Positioned above the canvas and aligned to the right) */
+#score {
+  position: absolute;
+  top: 20px; /* Position score 20px from the top */
+  right: 20px;
+  font-size: 1.2rem;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Styling for Canvas */
+canvas {
+  width: 100%; /* Make canvas fill the container */
+  height: 100%; /* Make canvas fill the container */
+  background: transparent; /* Ensure transparency */
+}
